@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.pojo.User" p:name="yf" p:age="20">
+
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    <bean id="user2" class="com.pojo.User" c:name="y" c:age="21">
+
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>

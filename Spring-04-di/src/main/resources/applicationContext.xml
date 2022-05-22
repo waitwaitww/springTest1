@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Address" class="com.pojo.Address">
+        <property name="address" value="xj"/>
+    </bean>
+
+    <bean id="student" class="com.pojo.Student">
+
+        <property name="name" value="yf"/>
+
+        <property name="address" ref="Address"/>
+
+        <property name="books">
+            <array>
+                <value>《西游记》</value>
+                <value>《三国演义》</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>停工</value>
+                <value>bailan</value>
+            </list>
+        </property>
+
+        <property name="card">
+            <map>
+                <entry key="sfz" value="342312341234123414"/>
+                <entry key="xuehao" value="201234213414"/>
+            </map>
+        </property>
+
+        <property name="gaems">
+            <set>
+                <value>LOL</value>
+                <value>PUBG</value>
+                <value>COC</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="shenggao">178</prop>
+                <prop key="tizhong">57</prop>
+            </props>
+        </property>
+
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="name" value="spring"/>
+    </bean>
+    <!-- 有参构造：-->
+    <bean id="user2" class="com.pojo.User">
+        <constructor-arg index="0" value="yang"/>
+    </bean>
+    <!--不建议使用 -->
+    <bean id="uesr3" class="com.pojo.User">
+        <constructor-arg type="java.lang.String" value="feng"/>
+    </bean>
+
+    <bean id="user4" class="com.pojo.User" name="user32,u4 u5;u6">
+        <constructor-arg name="name" value="2001"/>
+    </bean>
+
+    <!-- 别名-->
+    <alias name="user" alias="newuser"/>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>
