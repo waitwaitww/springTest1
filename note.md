@@ -80,4 +80,17 @@ xmlns:c="http://www.springframework.org/schema/c"
 @Qualifier//和@Autowired配和使用，两者结合类似于@resource
 @Autowired
 @Qualifier(value = "dog");
+
+@Nullable //字段标志的注解，说明这个字段可以为null
+
+@Component //组件，放在类上，说明这个类被spring管理了就是bean！
+//dao （@Repository）
+//service（@Service）
+//controller（@Controller）
+
+@Value//将类的属性注入值，放在属性之上或者set接口之上
+
+@Scope //定义作用域
+@Scope("singleton")
+
 ```
