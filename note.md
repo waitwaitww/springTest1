@@ -93,4 +93,16 @@ xmlns:c="http://www.springframework.org/schema/c"
 @Scope //定义作用域
 @Scope("singleton")
 
+@ComponentScan("com")//等价于<context:component-scan base-package="com"/>
+
+@Import(Config2.class)//等价于<import resource="Beans.xml"/>
+
+@Configuration //也会被spring接管，被注册到ioc容器中，因为它本来就是一个@Component
+//@Configuration 代表这是一个配置类，就和之前的beans.xml相同
+
+//注册一个bean，就相当于之前写的一个bean标签
+//这个方法的名字就相当于bean标签中的id属性
+//这个方法的返回值就相当于bean标签当中的class属性
+@Bean
+
 ```
